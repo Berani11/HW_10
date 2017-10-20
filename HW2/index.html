@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Создание таблиц и форм</title>
+  <style>
+    * {
+      font-size: 10 px;
+      font-family: Arial;
+    }
+    TABLE {
+    border-collapse: collapse;
+    text-align: center;
+   }
+    TD, TH {
+    padding: 5px;
+    border: 1px solid black;
+   }
+   .rotate {
+     display: block;
+     -moz-transform: rotate(-90deg);
+     -ms-transform: rotate(-90deg);
+     -webkit-transform: rotate(-90deg);
+     -o-transform: rotate(-90deg);
+     transform: rotate(-90deg);
+   }
+  </style>
+</head>
+<body>
+  <h1> Создание таблицы (прям с ичеечками)</h1>
+  <table>
+    <caption><em><strong>Таблица чего-то там</strong></em></caption>
+    <thead>
+      <tr>
+          <td colspan="10"><strong>Длинное сверху</strong></td>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td colspan="5"><strong>Длинное снизу</strong></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Яусталь</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td colspan="4"><strong>Немножко объединения в центре</strong></td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Текст</td>
+        <td rowspan="6">
+          <p><span class="rotate">я делала это час!</span></p>
+        </td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+      </tr>
+      <tr>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Яусталь</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+      </tr>
+      <tr>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td rowspan="3">
+          <p><em>и еще</e></p>
+          <p><em>горизонтально</e></p>
+        </td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+      </tr>
+      <tr>
+        <td>Текст</td>
+        <td>Яусталь</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Яусталь</td>
+        <td>Текст</td>
+      </tr>
+      <tr>
+        <td>Яусталь</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+      </tr>
+      <tr>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Яусталь</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Текст</td>
+        <td>Яусталь</td>
+      </tr>
+    </tbody>
+  </table>
+  <h1> Создание формы (возможно кликабельной) </h1>
+  <form action="/search.php">
+    <h2>1. Ввод путем тыканья по клавишам</h2>
+      <p><label>Печатать сюда -> <input type="text" name="inputxt1"></label></p>
+      <p><label>А вот сюда с @, для мыла -> <input type="email" name="inputxt2"></label></p>
+    <h2>2. А теперь надежный пароль, защищающий ничего</h2>
+      <p><label>Придумай что-то длинее 5 знаков плиз: <input type="password" name="inputpas"></label></p>
+    <h2>3. Для тех, кто не может определиться</h2>
+      <p>Что ты любишь делать?</p>
+      <p><label><input type="checkbox" name="input1">Кушать</label><br>
+      <label><input type="checkbox" name="input2">Спать</label><br>
+      <label><input type="checkbox" name="input3">Кодить в 5 утра</label><br>
+      <label><input type="checkbox" name="input4">Придумывать домашки по ХТМЛ</label></p>
+    <h2>4. А теперь придется определиться, сорь</h2>
+      <p>Кто самая лучшая староста?</p>
+      <label><input type="radio" name="answer">Инна</label><br>
+      <label><input type="radio" name="answer">Инночка</label><br>
+      <label><input type="radio" name="answer">Шарудина конечно</label><br>
+    <h2>5. Время делиться</h2>
+      <p><label>Загрузи сюда красивую фоточку себя (если такая конечно есть):</p>
+      <input type="file" name="foto"></label>
+    <h2>6. Ищи и делай Тык</h2>
+      <p><label>Чего надобно?<br>
+      <input type="search" name="hz"></label></p>
+      <p>И наверное кнокпа должна искать, но...</p>
+      <p><button>Я ничего не делаю, абсолютно бесполезна</button></p>
+    <h2>7. Время теребонькать!</h2>
+      <p><label><input type="range" name="azaza"></p>
+      <p>Kek</label></p>
+    <h2>8. Цифарки. Спойлер: тыкаешь и они меняются</h2>
+      <p><label>Попробуй! Эт прикольно:</p>
+      <p><input type="number" name="num" min="-1000" max="1000" step="1"></label></p>
+    <h2>9. Еще какая-то хрень</h2>
+      <p><label>Тут тип телефончик оставлять: <input type="tel" name="telephone"></label></p>
+      <p><label>И ссылочку: <input type="url" name="vk"></label></p>
+    <h2>10. Раскатаем списочек</h2>
+      <select name="list" size="8" multiple>
+        <option value="1">Один.</option>
+        <option value="2">Два.</option>
+        <option value="3">Три.</option>
+        <option value="4">Как видишь,</option>
+        <option value="5">у меня кончилась</option>
+        <option value="6">фантазия.</option>
+        <option value="7">Бррррррррря!</option>
+        <option value="8">Раунд!</option>
+      </select>
+    <h2>11. Кнопащки</h2>
+      <input type="submit"> <input type="reset">
+    <hr>
+    <h2>Как-то так</h2>
+    </form>
+</body>
+</html>
